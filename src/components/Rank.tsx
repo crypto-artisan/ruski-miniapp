@@ -14,15 +14,14 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
     const [ranking, setRaking] = useState<number>(0);
     const hasShownWarningRef = useRef(false);
 
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         if (!hasShownWarningRef.current && user) {
-            setLoading(true);
             axios.get(`${ENDPOINT}/api/user/all/${user.id}`)
                 .then((res) => {
                     let userInfo = res.data;
-                    setUsers(userInfo.allUser);
+                    setUsers(userInfo.allUsers);
                     setCurUser(userInfo.curUser);
                     setRaking(userInfo.ranking);
                     setLoading(false);
@@ -41,7 +40,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
     return (
         <div className="flex flex-col text-center items-center justify-start gap-4 pt-2">
             <div className="flex flex-col w-full justify-between items-center gap-4">
-                <div className="flex px-3 py-1 text-[#939393] text-lg font-bold">
+                <div className="flex px-3 py-1 text-lg font-bold w-full">
                     <div className="text-start w-[20%]">Rank</div>
                     <div className="text-start w-[55%]">User</div>
                     <div className="text-start w-[20%]">$Ruski</div>
@@ -55,7 +54,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                                 <div
                                     key={index}
                                     className={`flex ${index > 0 && "my-3"
-                                        } px-3 py-2 items-center bg-[#363636] rounded-lg`}
+                                        } px-3 py-2 items-center bg-[#2ea6d9f0] rounded-lg`}
                                 >
                                     <div className="text-xl max-sm:text-lg text-start pl-2 w-[20%]">{index + 1}</div>
                                     <div className="relative h-10 overflow-hidden w-[60%] flex items-center">
@@ -72,7 +71,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                                     </p>
                                 </div>
                             ))}
-                            < hr className="my-3 border-[#363636] border-2" />
+                            < hr className="my-3 border-[#2ea6d9f0] border-2" />
                             <div className="text-xl max-sm:text-lg text-start pl-2 w-[20%]">{ranking + 1}</div>
                             <div className="relative h-12 overflow-hidden w-[60%] flex items-center">
                                 <img src="/logo.png" alt="avatar" className="w-12 h-12 rounded-full" />
