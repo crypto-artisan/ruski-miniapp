@@ -115,7 +115,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
     }
     return (
         <div className="h-full flex flex-col text-center items-center justify-around">
-            <div className="flex flex-col w-full gap-2">
+            <div className="flex flex-col w-full gap-2  items-center justify-between">
                 <h1 className="font-bold text-[24px] text-left">Tasks</h1>
                 <section className="flex flex-col gap-2 items-center py-2">
                     <img src="/dollar.png" alt="dollar" className="h-[80px] w-[80px] rounded-full scale-150" />
@@ -123,7 +123,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                         COMPLETE THE TASKS TO EARN MORE POINTS
                     </p>
                 </section>
-                <div className="customCard flex flex-col w-full items-center justify-between gap-2 overflow-hidden h-full" style={{ padding: "10px" }}>
+                <div className="customCard flex flex-col w-full items-center justify-between gap-2 overflow-hidden" style={{ padding: "10px" }}>
                     {
                         data?.map((item: any, index) => (
                             <div key={index} className="item flex flex-row w-full justify-between gap-2 py-2 items-center">
