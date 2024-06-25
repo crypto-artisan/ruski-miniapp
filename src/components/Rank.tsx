@@ -14,7 +14,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
     const [ranking, setRaking] = useState<number>(0);
     const hasShownWarningRef = useRef(false);
 
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         if (!hasShownWarningRef.current && user) {
@@ -51,7 +51,6 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                         <Loader width="30" />
                     ) : (
                         <>
-
                             <div className="h-[70vh] overflow-auto w-full">
                                 {users.map((iUser: any, index) => (
                                     <div
