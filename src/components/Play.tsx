@@ -57,7 +57,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                     loading ? (
                         <Loader width="15" />
                     ) : (
-                        <h1 className="text-[52px]">{totalPoint.toFixed(3)}</h1>
+                        <h1 className="text-[48px]">{totalPoint.toFixed(3)}</h1>
                     )
                 }
                 <h3 className="text-[20px]">POINTS</h3>
