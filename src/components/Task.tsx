@@ -113,10 +113,10 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
     return (
         <div className="h-full flex flex-col text-center items-center justify-around">
             <div className="flex flex-col w-full gap-2  items-center justify-between">
-                <h1 className="font-bold text-[24px] text-left">Tasks</h1>
+                <h1 className="text-[24px] text-left">Tasks</h1>
                 <section className="flex flex-col gap-2 items-center py-2">
                     <img src="/dollar.png" alt="dollar" className="h-[80px] w-[80px] rounded-full scale-150" />
-                    <p className="text-[18px] text-center font-bold text-[#36b5dd] z-0">
+                    <p className="text-[18px] text-center text-[#2ea6d9f0] z-0">
                         COMPLETE THE TASKS TO EARN MORE POINTS
                     </p>
                 </section>
@@ -128,15 +128,15 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                                     <img src={item?.img} alt="x-icon" className="h-[40px] w-[40px] rounded-full" />
                                     <div className="flex flex-col text-left">
                                         <h1 className="title text-[16px]">{item?.title}</h1>
-                                        <h2 className="title text-[12px] text-black font-bold">
+                                        <h2 className="title text-[12px] text-black">
                                             +{item?.points} Points
                                         </h2>
                                     </div>
                                 </section>
                                 {task.includes(item?.id) ? (
-                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">Claimed</button>
+                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">CLAIMED</button>
                                 ) : (
-                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">Start</button>
+                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">START</button>
                                 )}
 
                             </div>

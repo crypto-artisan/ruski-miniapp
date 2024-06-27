@@ -48,19 +48,19 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                 <img className="logo h-[120px] w-[120px] rounded-full" src="/logo.png" alt="logo" />
                 <h3 className="tgId text-[32px] opacity-80">{user?.first_name} {user?.last_name}</h3>
             </div>
-            <div className="flex flex-col balance gap-6 pt-2">
+            <div className="flex flex-col balance gap-6 pt-2 text-black">
                 <div className="flex flex-row items-center justify-center gap-3">
-                    <FontAwesomeIcon className='cursor-pointer hover:text-graydark hover:opacity-70 transition-all duration-700 text-[#36b5dd]' icon={faWallet} />
-                    <h4 className="text-[20px] text-[#36b5dd]">balances</h4>
+                    {/* <FontAwesomeIcon className='cursor-pointer hover:text-graydark hover:opacity-70 transition-all duration-700 text-[#36b5dd]' icon={faWallet} /> */}
+                    <h4 className="text-[20px] font-extrabold">🦴BALANCES</h4>
                 </div>
                 {
                     loading ? (
                         <Loader width="15" />
                     ) : (
-                        <h1 className="font-bold text-[52px] text-[#36b5dd]">{totalPoint.toFixed(3)}</h1>
+                        <h1 className="text-[52px]">{totalPoint.toFixed(3)}</h1>
                     )
                 }
-                <h3 className="font-bold text-[20px] text-[#36b5dd]">POINTS</h3>
+                <h3 className="text-[20px]">POINTS</h3>
             </div>
             {
                 !start ? (
@@ -68,7 +68,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                     claimShow ? (
                         <button onClick={handleClaim} className="customBtn bg-white py-2 px-4">Claim</button>
                     ) : (
-                        <button onClick={handleFarming} className="customBtn startBtn bg-white py-2 px-4">Start Mining</button>
+                        <button onClick={handleFarming} className="customBtn startBtn bg-white py-2 px-4">START MINING</button>
                     )
                 ) : (
                     <>

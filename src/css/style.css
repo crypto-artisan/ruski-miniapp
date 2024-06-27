@@ -253,6 +253,8 @@ option {
     background-color: #fff;
     font-family: 'YACgEYweTR4-0', 'Outfit', sans-serif;
     font-weight: bolder;
+    font: caption;
+    text-transform: uppercase;
   }
 }
 @layer components {
