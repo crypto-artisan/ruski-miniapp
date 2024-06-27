@@ -66,9 +66,9 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                 !start ? (
 
                     claimShow ? (
-                        <button onClick={handleClaim} className="customBtn bg-white py-2 px-4">Claim</button>
+                        <button onClick={handleClaim} className="startBtn bg-white py-2 px-4">Claim</button>
                     ) : (
-                        <button onClick={handleFarming} className="customBtn startBtn bg-white py-2 px-4">START MINING</button>
+                        <button onClick={handleFarming} className="startBtn bg-white py-2 px-4">WOOF</button>
                     )
                 ) : (
                     <>
