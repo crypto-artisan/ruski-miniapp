@@ -33,7 +33,7 @@ const data = [
     },
     {
         "id": "dextool",
-        "title": "Explore Ruski's Dextool",
+        "title": "check out ruski dexscreener",
         "img": "/dextools.svg",
         "points": 100,
         "link": "https://dexscreener.com/ton/EQC3LfUR_Sfcu9p1d88JUySIb7LPibO2y-S8y3jzcQM4bua1"
