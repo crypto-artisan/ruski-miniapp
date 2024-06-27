@@ -43,12 +43,12 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
         }
     }
     return (
-        <div className="h-full flex flex-col text-center items-center justify-around">
-            <div className="flex flex-col items-center justify-center gap-3">
+        <div className="h-full flex flex-col text-center items-center justify-around py-2">
+            <div className="flex flex-col items-center justify-center gap-2">
                 <img className="logo h-[120px] w-[120px] rounded-full" src="/logo.png" alt="logo" />
-                <h3 className="text-[32px] opacity-80 text-black">{user?.first_name} {user?.last_name}</h3>
+                <h3 className="text-[28px] opacity-80 text-black">{user?.first_name} {user?.last_name}</h3>
             </div>
-            <div className="flex flex-col balance gap-6 pt-2 text-black">
+            <div className="flex flex-col balance gap-2 pt-2 text-black">
                 <div className="flex flex-row items-center justify-center gap-3">
                     {/* <FontAwesomeIcon className='cursor-pointer hover:text-graydark hover:opacity-70 transition-all duration-700 text-[#36b5dd]' icon={faWallet} /> */}
                     <h4 className="text-[20px] font-extrabold">🦴BALANCES</h4>
@@ -83,7 +83,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                             }
                         </div>
                         <div className="customCard flex flex-row w-full justify-between items-center">
-                            <h2 className="earning text-[28px]">Earning</h2>
+                            <h2 className="text-[24px]">Earning</h2>
                             <section className="flex flex-row gap-4">
                                 {
                                     loading ? (
