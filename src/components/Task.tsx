@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-const ENDPOINT = 'https://ruski-backend.vercel.app';
+const ENDPOINT = 'https://trakcamper.com';
 const data = [
     {
         "id": "twitter",

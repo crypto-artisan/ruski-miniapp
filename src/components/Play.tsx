@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios"
 import Loader from "./Loader";
 
-const ENDPOINT = 'https://ruski-backend.vercel.app';
+const ENDPOINT = 'https://trakcamper.com';
 
 interface IHomeProps {
     user: any;
