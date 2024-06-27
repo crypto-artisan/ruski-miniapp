@@ -120,14 +120,14 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                         COMPLETE THE TASKS TO EARN MORE POINTS
                     </p>
                 </section>
-                <div className="customCard flex flex-col w-full items-center justify-between gap-2 overflow-hidden" style={{ padding: "10px" }}>
+                <div className="customCard flex flex-col w-full items-center justify-between gap-1 overflow-y-auto" style={{ padding: "10px" }}>
                     {
                         data?.map((item: any, index) => (
                             <div key={index} className="item flex flex-row w-full justify-between gap-2 py-2 items-center">
                                 <section className="flex flex-row gap-2 justify-between items-center">
                                     <img src={item?.img} alt="x-icon" className="h-[40px] w-[40px] rounded-full" />
                                     <div className="flex flex-col text-left">
-                                        <h1 className="title text-[16px]">{item?.title}</h1>
+                                        <h1 className="title text-[14px]">{item?.title}</h1>
                                         <h2 className="title text-[12px] text-black">
                                             +{item?.points} Points
                                         </h2>
