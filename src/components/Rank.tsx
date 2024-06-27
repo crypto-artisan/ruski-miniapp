@@ -55,7 +55,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                                 {users.map((iUser: any, index) => (
                                     <div
                                         key={index}
-                                        className={`flex px-3 py-2 items-center bg-[#2ea6d9f0] w-full`}
+                                        className={`flex px-3 py-1 items-center bg-[#2ea6d9f0] w-full`}
                                     >
                                         <div className="text-lg max-sm:text-lg text-start pl-2 w-[20%]">{index + 1}</div>
                                         <div className="relative h-10 overflow-hidden w-[60%] flex items-center">
