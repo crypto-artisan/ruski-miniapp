@@ -252,6 +252,7 @@ option {
     color: #fff;
     background-color: #fff;
     font-family: 'YACgEYweTR4-0', 'Outfit', sans-serif;
+    font-weight: bolder;
   }
 }
 @layer components {
