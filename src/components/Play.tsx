@@ -46,7 +46,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
         <div className="h-full flex flex-col text-center items-center justify-around">
             <div className="flex flex-col items-center justify-center gap-3">
                 <img className="logo h-[120px] w-[120px] rounded-full" src="/logo.png" alt="logo" />
-                <h3 className="tgId text-[32px] opacity-80">{user?.first_name} {user?.last_name}</h3>
+                <h3 className="text-[32px] opacity-80 text-black">{user?.first_name} {user?.last_name}</h3>
             </div>
             <div className="flex flex-col balance gap-6 pt-2 text-black">
                 <div className="flex flex-row items-center justify-center gap-3">
