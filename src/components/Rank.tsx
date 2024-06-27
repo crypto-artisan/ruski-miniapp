@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import toastr from "toastr";
 import Loader from "./Loader";
-const ENDPOINT = 'http://localhost:5000'
+const ENDPOINT = 'https://ruski-backend.vercel.app'
 
 interface IRankProps {
     user: any;

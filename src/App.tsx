@@ -8,7 +8,7 @@ import axios from "axios";
 import toastr from "toastr";
 import { useTelegram } from "./hooks/useTelegram";
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://ruski-backend.vercel.app';
 
 function App() {
   let countdownTime = 12 * 60 * 60;

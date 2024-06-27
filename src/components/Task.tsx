@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
-import LinearProgress from '@mui/material/LinearProgress';
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://ruski-backend.vercel.app';
 const data = [
     {
         "id": "twitter",
@@ -50,9 +49,7 @@ interface ITaskProps {
 }
 
 const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, task, setTask }) => {
-    const handleClick = () => {
-        setTab("Deposit");
-    }
+
     const handleFollow = (link: any, id: any) => {
         if (id == "telegram" || id == "fyde") {
             axios.put(`${ENDPOINT}/api/user/task/${user?.id}`, {

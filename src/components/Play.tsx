@@ -4,7 +4,7 @@ import React from "react";
 import axios from "axios"
 import Loader from "./Loader";
 
-const ENDPOINT = 'http://localhost:5000';
+const ENDPOINT = 'https://ruski-backend.vercel.app';
 
 interface IHomeProps {
     user: any;

@@ -250,10 +250,8 @@ option {
     @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
     overflow: hidden;
     color: #fff;
-    /* background: linear-gradient(to bottom, #000000, #24556B); */
-    /* background: radial-gradient(circle at center, #2ea6d9, #000); */
     background-color: #fff;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'YACgEYweTR4-0', 'Outfit', sans-serif;
   }
 }
 @layer components {
