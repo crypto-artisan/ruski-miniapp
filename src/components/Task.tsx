@@ -120,7 +120,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                         COMPLETE THE TASKS TO EARN MORE POINTS
                     </p>
                 </section>
-                <div className="customCard flex flex-col w-full items-center justify-between gap-1 overflow-y-auto" style={{ padding: "10px" }}>
+                <div className="customCard flex flex-col w-full items-center justify-between gap-1 overflow-auto h-[30vh]" style={{ padding: "10px" }}>
                     {
                         data?.map((item: any, index) => (
                             <div key={index} className="item flex flex-row w-full justify-between gap-2 py-2 items-center">
