@@ -86,7 +86,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (user && !hasShownWarningRef.current && tab == "Play") {
+    if (user && tab == "Play") {
       hasShownWarningRef.current = true;
       setLoading(true);
       let data = {
