@@ -43,7 +43,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
         }
     }
     return (
-        <div className="h-full flex flex-col text-center items-center justify-around py-2">
+        <div className="h-screen flex flex-col text-center items-center justify-between py-8 pb-[90px]">
             <div className="flex flex-col items-center justify-center gap-2">
                 <img className="logo h-[120px] w-[120px] rounded-full" src="/logo.png" alt="logo" />
                 <h3 className="text-[28px] opacity-80 text-black">{user?.first_name} {user?.last_name}</h3>
@@ -71,7 +71,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                         <button onClick={handleFarming} className="startBtn bg-white py-2 px-4">WOOF</button>
                     )
                 ) : (
-                    <>
+                    <div className="w-full space-y-3">
                         <div className="customCard flex flex-row w-full justify-between items-center">
                             <img src="/pick.svg" alt="pick-icon" className="h-[30px] w-[30px] rotate-45" />
                             {
@@ -121,7 +121,7 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
 
                             </section>
                         </div >
-                    </>
+                    </div>
                 )
             }
         </div >

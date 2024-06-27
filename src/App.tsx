@@ -131,7 +131,7 @@ function App() {
 
   return (
     <div className="h-full max-h-screen overflow-hidden md:px-[30%]">
-      <div className="main-content h-screen overflow-hidden pb-[150px] px-4 dM-Sans font-extrabold">
+      <div className="main-content h-screen overflow-hidden px-4 dM-Sans font-extrabold">
         {
           tab == "Play" && (
             <Play user={user} onClose={onClose} point={point}

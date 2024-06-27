@@ -111,38 +111,36 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
             )
     }
     return (
-        <div className="h-full flex flex-col text-center items-center justify-around">
-            <div className="flex flex-col w-full gap-2  items-center justify-between">
-                <h1 className="text-[24px] text-left">Tasks</h1>
-                <section className="flex flex-col gap-2 items-center py-2">
-                    <img src="/dollar.png" alt="dollar" className="h-[80px] w-[80px] rounded-full scale-150" />
-                    <p className="text-[18px] text-center text-[#2ea6d9f0] z-0">
-                        COMPLETE THE TASKS TO EARN MORE POINTS
-                    </p>
-                </section>
-                <div className="customCard flex flex-col w-full items-center justify-between gap-1 overflow-auto h-[40vh]" style={{ padding: "10px" }}>
-                    {
-                        data?.map((item: any, index) => (
-                            <div key={index} className="item flex flex-row w-full justify-between gap-2 py-2 items-center">
-                                <section className="flex flex-row gap-2 justify-between items-center">
-                                    <img src={item?.img} alt="x-icon" className="h-[40px] w-[40px] rounded-full" />
-                                    <div className="flex flex-col text-left">
-                                        <h1 className="title text-[14px]">{item?.title}</h1>
-                                        <h2 className="title text-[12px] text-black">
-                                            +{item?.points} Points
-                                        </h2>
-                                    </div>
-                                </section>
-                                {task.includes(item?.id) ? (
-                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">CLAIMED</button>
-                                ) : (
-                                    <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">START</button>
-                                )}
+        <div className="h-screen flex flex-col w-full gap-2  items-center justify-between pb-[90px]">
+            <h1 className="text-[24px] text-left">Tasks</h1>
+            <section className="flex flex-col gap-2 items-center py-2">
+                <img src="/dollar.png" alt="dollar" className="h-[80px] w-[80px] rounded-full scale-150" />
+                <p className="text-[18px] text-center text-[#2ea6d9f0] z-0">
+                    COMPLETE THE TASKS TO EARN MORE POINTS
+                </p>
+            </section>
+            <div className="customCard flex flex-col w-full items-center justify-between gap-1 overflow-auto h-[40vh]" style={{ padding: "10px" }}>
+                {
+                    data?.map((item: any, index) => (
+                        <div key={index} className="item flex flex-row w-full justify-between gap-2 py-2 items-center">
+                            <section className="flex flex-row gap-2 justify-between items-center">
+                                <img src={item?.img} alt="x-icon" className="h-[40px] w-[40px] rounded-full" />
+                                <div className="flex flex-col text-left">
+                                    <h1 className="title text-[14px]">{item?.title}</h1>
+                                    <h2 className="title text-[12px] text-black">
+                                        +{item?.points} Points
+                                    </h2>
+                                </div>
+                            </section>
+                            {task.includes(item?.id) ? (
+                                <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">CLAIMED</button>
+                            ) : (
+                                <button onClick={() => handleFollow(item?.link, item?.id)} className="customBtn px-4 py-2">START</button>
+                            )}
 
-                            </div>
-                        ))
-                    }
-                </div>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
