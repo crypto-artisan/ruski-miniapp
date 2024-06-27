@@ -57,17 +57,17 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                                         key={index}
                                         className={`flex px-3 py-2 items-center bg-[#2ea6d9f0] w-full`}
                                     >
-                                        <div className="text-xl max-sm:text-lg text-start pl-2 w-[20%]">{index + 1}</div>
+                                        <div className="text-lg max-sm:text-lg text-start pl-2 w-[20%]">{index + 1}</div>
                                         <div className="relative h-10 overflow-hidden w-[60%] flex items-center">
                                             <img
                                                 src="/logo.png"
                                                 alt="avatar"
                                                 className="w-12 h-12 rounded-full"
                                             />
-                                            <p className="text-xl max-sm:text-lg text-start pl-2">{iUser.userName}</p>
+                                            <p className="text-lg max-sm:text-lg text-start pl-2">{iUser.userName}</p>
                                         </div>
 
-                                        <p className="text-xl max-sm:text-lg text-start pl-2 w-[30%]">
+                                        <p className="text-lg max-sm:text-lg text-start pl-2 w-[30%]">
                                             {formatNumberWithCommas(iUser.totalPoints)}
                                         </p>
                                     </div>
@@ -76,12 +76,12 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                             <div
                                 className={`flex px-3 py-2 items-center bg-[#227ea6] rounded-lg w-full`}
                             >
-                                <div className="text-xl max-sm:text-lg text-start pl-2 w-[20%]">{ranking + 1}</div>
+                                <div className="text-lg max-sm:text-lg text-start pl-2 w-[20%]">{ranking + 1}</div>
                                 <div className="relative h-12 overflow-hidden w-[60%] flex items-center">
                                     <img src="/logo.png" alt="avatar" className="w-12 h-12 rounded-full" />
-                                    <p className="text-xl max-sm:text-lg text-start pl-2">{curUser.userName}</p>
+                                    <p className="text-lg max-sm:text-lg text-start pl-2">{curUser.userName}</p>
                                 </div>
-                                <p className="text-xl max-sm:text-lg text-start pl-2 w-[30%]">
+                                <p className="text-lg max-sm:text-lg text-start pl-2 w-[30%]">
                                     {formatNumberWithCommas(curUser.totalPoints)}
                                 </p>
                             </div>
