@@ -39,7 +39,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
     }
 
     return (
-        <div className="flex flex-col text-center items-center justify-start gap-4 pt-2">
+        <div className="flex flex-col text-center items-center justify-start gap-4 py-2">
             <div className="flex flex-col w-full justify-between items-center gap-4">
                 <div className="flex px-3 text-lg w-full text-[#2ea6d9f0]">
                     <div className="text-start w-[20%]">Rank</div>
