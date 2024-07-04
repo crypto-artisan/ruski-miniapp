@@ -34,7 +34,7 @@ function App() {
 
   const [task, setTask] = useState<string[]>([]);
 
-  const { user, onClose, start_param } = useTelegram();
+  const { user, start_param } = useTelegram();
 
   const handleTabChange = (status: string) => {
     setTab(status);
@@ -134,7 +134,7 @@ function App() {
       <div className="main-content h-screen overflow-hidden px-4 dM-Sans font-extrabold">
         {
           tab == "Play" && (
-            <Play user={user} onClose={onClose} point={point}
+            <Play user={user} point={point}
               totalPoint={totalPoint} setTotalPoint={setTotalPoint}
               claimShow={claimShow}
               setClaimShow={setClaimShow}
@@ -144,13 +144,12 @@ function App() {
               min={min}
               sec={sec}
               loading={loading}
-              setLoading={setLoading}
             />
           )
         }
         {
           tab == "Task" && (
-            <Task setTab={setTab} user={user} totalPoint={totalPoint} setTotalPoint={setTotalPoint} task={task} setTask={setTask} />
+            <Task user={user} totalPoint={totalPoint} setTotalPoint={setTotalPoint} task={task} setTask={setTask} />
           )
         }
         {

@@ -43,7 +43,6 @@ const data = [
     }
 ];
 interface ITaskProps {
-    setTab: (status: string) => void;
     user: any;
     totalPoint: number;
     setTotalPoint: (status: number) => void;
@@ -51,7 +50,7 @@ interface ITaskProps {
     setTask: (status: string[]) => void;
 }
 
-const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, task, setTask }) => {
+const Task: React.FC<ITaskProps> = ({ user, totalPoint, setTotalPoint, task, setTask }) => {
 
     const handleFollow = (link: any, id: any) => {
         if (id == "telegram" || id == "fyde") {
@@ -61,6 +60,10 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                 .then(res => {
                     if (res.data) {
                         let newPoints = totalPoint + 100;
+                        if (newPoints >= 1000000) {
+                            newPoints = 1000000;
+                            toast.success("Mining limit has been reached!");
+                        }
                         setTotalPoint(newPoints);
                         setTask([...task, id]);
 
@@ -83,6 +86,10 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                     .then(res => {
                         if (res.data) {
                             let newPoints = totalPoint + 100;
+                            if (newPoints >= 1000000) {
+                                newPoints = 1000000;
+                                toast.success("Mining limit has been reached!");
+                            }
                             setTotalPoint(newPoints);
                             setTask([...task, id]);
                             toast.success("Congratulation! You just earned 100 POINTS");
@@ -95,23 +102,6 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
             }, 5000);
         }
 
-    }
-    const handleClaim = () => {
-        axios.put(`${ENDPOINT}/api/user/task/${user?.id}`, {
-            id: "all"
-        })
-            .then(res => {
-                if (res.data) {
-                    let newPoints = totalPoint + 200;
-                    setTotalPoint(newPoints);
-                    setTask([...task, "all"]);
-                    toast.success("Congratulation! You just earned 200 POINTS");
-                }
-            })
-            .catch(err => {
-                console.error("er", err);
-            }
-            )
     }
     return (
         <div className="h-screen flex flex-col w-full gap-2  items-center justify-between pb-[90px]">

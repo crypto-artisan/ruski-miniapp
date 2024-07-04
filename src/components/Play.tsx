@@ -1,13 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWallet } from '@fortawesome/free-solid-svg-icons';
 import React from "react";
-import axios from "axios"
+import axios from "axios";
+import { toast } from "react-hot-toast";
 import Loader from "./Loader";
 import { ENDPOINT } from "../data";
 
 interface IHomeProps {
     user: any;
-    onClose: () => void;
     point: number;
     totalPoint: number;
     setTotalPoint: (status: number) => void;
@@ -19,14 +17,17 @@ interface IHomeProps {
     min: number;
     sec: number;
     loading: boolean;
-    setLoading: (status: boolean) => void;
 }
-const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotalPoint, handleFarming, start, claimShow, setClaimShow, hour, min, sec, loading, setLoading }) => {
+const Play: React.FC<IHomeProps> = ({ user, point, totalPoint, setTotalPoint, handleFarming, start, claimShow, setClaimShow, hour, min, sec, loading }) => {
 
     const handleClaim = () => {
         if (user) {
             //tg message
             let newPoints = totalPoint + point;
+            if (newPoints >= 1000000) {
+                newPoints = 1000000;
+                toast.success("Mining limit has been reached!");
+            }
             setTotalPoint(newPoints);
             setClaimShow(false);
             const data = {
@@ -38,7 +39,6 @@ const Play: React.FC<IHomeProps> = ({ user, onClose, point, totalPoint, setTotal
                 .catch(error => {
                     console.error('Error occurred during PUT request:', error);
                 });
-            // onClose();
         }
     }
     return (

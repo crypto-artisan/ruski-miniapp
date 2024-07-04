@@ -1,4 +1,4 @@
-import { faClone, faPaperPlane, faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { faClone, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
