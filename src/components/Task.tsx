@@ -1,13 +1,16 @@
 import axios from "axios";
 import React from "react";
-const ENDPOINT = 'https://trakcamper.com';
+import { toast } from "react-hot-toast";
+
+import { ENDPOINT } from "../data";
+
 const data = [
     {
         "id": "twitter",
         "title": "Follow Ruski's X",
         "img": "/twitter.svg",
         "points": 100,
-        "link": "https://x.com/ruskiton/status/1805562536424546621?s=46&t=EKWa8NdWTOERIDjJ2Jn0PA"
+        "link": "https://x.com/RuskiOnTon/status/1808204644088209822?t=pCnV4etw-EO2vnDdiKzVQw&s=19"
     },
     ,
     {
@@ -61,7 +64,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                         setTotalPoint(newPoints);
                         setTask([...task, id]);
 
-                        toastr.success("Congratulation! You just earned 100 POINTS");
+                        toast.success("Congratulation! You just earned 100 POINTS");
                     }
                 })
                 .catch(err => {
@@ -82,7 +85,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                             let newPoints = totalPoint + 100;
                             setTotalPoint(newPoints);
                             setTask([...task, id]);
-                            toastr.success("Congratulation! You just earned 100 POINTS");
+                            toast.success("Congratulation! You just earned 100 POINTS");
                         }
                     })
                     .catch(err => {
@@ -102,7 +105,7 @@ const Task: React.FC<ITaskProps> = ({ setTab, user, totalPoint, setTotalPoint, t
                     let newPoints = totalPoint + 200;
                     setTotalPoint(newPoints);
                     setTask([...task, "all"]);
-                    toastr.success("Congratulation! You just earned 200 POINTS");
+                    toast.success("Congratulation! You just earned 200 POINTS");
                 }
             })
             .catch(err => {

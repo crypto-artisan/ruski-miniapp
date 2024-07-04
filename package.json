@@ -28,7 +28,7 @@
     "react-loader-spinner": "^6.1.6",
     "react-redux": "^8.0.0",
     "react-router-dom": "^6.23.1",
-    "toastr": "^2.1.4",
+    "react-toastify": "^10.0.5",
     "uuid": "^9.0.1",
     "viem": "^1.19.3",
     "wagmi": "^1.4.7",

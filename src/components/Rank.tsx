@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
-import toastr from "toastr";
+import {toast} from "react-hot-toast";
 import Loader from "./Loader";
-const ENDPOINT = 'https://trakcamper.com'
+import { ENDPOINT } from "../data";
 
 interface IRankProps {
     user: any;
@@ -28,7 +28,7 @@ const Rank: React.FC<IRankProps> = ({ user }) => {
                     setLoading(false);
                 })
                 .catch((err) => {
-                    toastr.error("Something Went Wrong!");
+                    toast.error("Something Went Wrong!");
                 })
             hasShownWarningRef.current = true;
         }

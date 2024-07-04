@@ -3,8 +3,7 @@ import { faWallet } from '@fortawesome/free-solid-svg-icons';
 import React from "react";
 import axios from "axios"
 import Loader from "./Loader";
-
-const ENDPOINT = 'https://trakcamper.com';
+import { ENDPOINT } from "../data";
 
 interface IHomeProps {
     user: any;

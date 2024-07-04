@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import TabBar from "./components/TabBar";
-import Header from "./components/Header";
 import Play from "./components/Play";
 import Task from "./components/Task";
+import Friend from "./components/Friend";
 import Rank from "./components/Rank";
 import axios from "axios";
-import toastr from "toastr";
+import { toast } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 import { useTelegram } from "./hooks/useTelegram";
-
-const ENDPOINT = 'https://trakcamper.com';
+import { ENDPOINT } from "./data";
 
 function App() {
   let countdownTime = 12 * 60 * 60;
@@ -117,13 +117,13 @@ function App() {
             countdownTime = 12 * 60 * 60;
           }
           if (start_param && !inviteMsg && start_param != userInfo.inviteLink) {
-            toastr.success("Successfully Invited!");
+            toast.success("Successfully Invited!");
             setInviteMsg(true);
           }
           setLoading(false);
         })
         .catch(error => {
-          // toastr.error("error", error);
+          // toast.error("error", error);
           console.error('Error occurred during PUT request:', error);
         });
     }
@@ -154,10 +154,16 @@ function App() {
           )
         }
         {
+          tab == "Friend" && (
+            <Friend user={user} />
+          )
+        }
+        {
           tab == "Rank" && (
             <Rank user={user} />
           )
         }
+        <ToastContainer />
       </div>
       <TabBar tab={tab} setTab={handleTabChange} />
     </div>
